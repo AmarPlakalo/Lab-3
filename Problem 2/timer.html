@@ -3,10 +3,19 @@
 <head>
 	<meta charset="utf-8">
     <title>Timer</title>
-	
-	<style type="text/css">
-	</style>
 </head>
+
 <body>
+
+<form id="timer_form">
+
+	<input type="number" id="hours" min="0" size="1" placeholder="h" value="">
+	<input type="number" id="minutes" min="0" size="1" placeholder="m" value="">
+	<input type="number" id="seconds" min="0" size="1" placeholder="s" class="s" value="">
+	<button form="timer_form" id="timer_btn" type="submit" onclick="start_timer()">Start</button>
+
+</form>
+
+<script src="timer-script.js"></script>
 </body>
 </html>
