@@ -16,4 +16,38 @@ function start_timer()
 	minutes_displayed.innerHTML = minutes;
 	colon_separate_time_2.innerHTML = ":";
 	seconds_displayed.innerHTML = seconds;
+
+	function showing_seconds_function() 
+	{
+	  if(current_seconds == seconds)
+	  {
+		seconds_displayed.innerHTML = seconds;
+		seconds--;
+		
+	    if (seconds >= 0) 
+		{
+		  showing_seconds_function();
+		}
+		
+	  }
+	  
+	  else
+	  {
+		  setTimeout(function() 
+		  {
+			seconds_displayed.innerHTML = seconds;
+			seconds--;
+			
+			if (seconds >= 0) 
+			{
+			  showing_seconds_function();
+			}
+			
+		  }, 1000)
+	  }
+	  
+	}
+
+	showing_seconds_function();
+
 }
