@@ -3,6 +3,14 @@
 <head>
 	<meta charset="utf-8">
     <title>Timer</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/6.1.0/rxjs.umd.js"></script>
+	
+	<style>
+		div
+		{
+			float:left;
+		}
+	</style>
 </head>
 
 <body>
@@ -16,11 +24,12 @@
 
 </form>
 
-<p id="hours_shown"></p>
-<p id="colon_to_separate_time"></p>
-<p id="minutes_shown"></p>
-<p id="colon_to_separate_time_2"></p>
-<p id="seconds_shown"></p>
+<div><p id="hours_shown"></p></div>
+<div><p id="colon_to_separate_time"></p></div>
+<div><p id="minutes_shown"></p></div>
+<div><p id="colon_to_separate_time_2"></p></div>
+<div><p id="seconds_shown"></p></div>
+
 
 <script src="timer-script.js"></script>
 </body>
