@@ -41,8 +41,10 @@ function start_timer()
 			if(minutes == 0 && seconds == 0 && hours != 0)
 			{
 				hours--;
-				minutes = 60;
+				minutes = 59;
 				seconds = 59;
+				hours_displayed.innerHTML = hours;
+				minutes_displayed.innerHTML = minutes;
 			}
 		}
 		
