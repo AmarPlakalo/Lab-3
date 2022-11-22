@@ -3,6 +3,25 @@ function start_timer()
 	let hours = document.getElementById("hours").value;
 	let minutes = document.getElementById("minutes").value;
 	let seconds = document.getElementById("seconds").value;
+	
+	if(seconds < 0 || seconds > 60)
+	{
+		alert("Seconds have to be between 0 and 60 inclusive!");
+		return false;
+	}
+	
+	if(minutes < 0 || minutes > 60)
+	{
+		alert("Minutes have to be between 0 and 60 inclusive!");
+		return false;
+	}
+	
+	if(hours < 0)
+	{
+		alert("Minimum value for hours is 0. Input a value that is 0 or greater than 0!");
+		return false;
+	}
+	
 	let current_seconds = seconds;
 	
 	let hours_displayed = document.getElementById("hours_shown");
