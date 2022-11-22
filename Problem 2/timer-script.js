@@ -17,7 +17,7 @@ function start_timer()
 	colon_separate_time_2.innerHTML = ":";
 	seconds_displayed.innerHTML = seconds;
 
-	function showing_seconds_function() 
+	function showing_seconds_minutes_hours_function() 
 	{
 	  if(current_seconds == seconds)
 	  {
@@ -26,7 +26,24 @@ function start_timer()
 		
 	    if (seconds >= 0) 
 		{
-		  showing_seconds_function();
+		  showing_seconds_minutes_hours_function();
+		}
+		
+		if (seconds == 0)
+		{
+			if(minutes != 0)
+			{
+				minutes--;
+				seconds = 60;
+				minutes_displayed.innerHTML = minutes;
+			}
+			
+			if(minutes == 0 && seconds == 0 && hours != 0)
+			{
+				hours--;
+				minutes = 60;
+				seconds = 59;
+			}
 		}
 		
 	  }
@@ -40,14 +57,31 @@ function start_timer()
 			
 			if (seconds >= 0) 
 			{
-			  showing_seconds_function();
+			  showing_seconds_minutes_hours_function();
+			}
+			if (seconds == 0)
+			{
+				if(minutes != 0)
+				{
+					minutes--;
+					seconds = 60;
+					minutes_displayed.innerHTML = minutes;
+				}
+				
+				if(minutes == 0 && seconds == 0 && hours != 0)
+				{
+					hours--;
+					minutes = 59;
+					seconds = 59;
+					hours_displayed.innerHTML = hours;
+					minutes_displayed.innerHTML = minutes;
+				}
 			}
 			
 		  }, 1000)
 	  }
 	  
 	}
-
-	showing_seconds_function();
-
+	
+	showing_seconds_minutes_hours_function();
 }
