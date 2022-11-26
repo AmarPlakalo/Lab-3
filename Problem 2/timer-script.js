@@ -4,6 +4,8 @@ function start_timer()
 	let minutes = document.getElementById("minutes").value;
 	let seconds = document.getElementById("seconds").value;
 	
+	let current_seconds = seconds;
+	
 	if(seconds < 0 || seconds > 60)
 	{
 		alert("Seconds have to be between 0 and 60 inclusive!");
@@ -22,7 +24,11 @@ function start_timer()
 		return false;
 	}
 	
-	let current_seconds = seconds;
+	if(seconds == '' && minutes == '' && hours == '')
+	{
+		alert("No values entered. You must specify a value/values in order to start the timer!");
+		return false;
+	}
 	
 	let hours_displayed = document.getElementById("hours_shown");
 	let minutes_displayed = document.getElementById("minutes_shown");
@@ -35,6 +41,30 @@ function start_timer()
 	minutes_displayed.innerHTML = minutes;
 	colon_separate_time_2.innerHTML = ":";
 	seconds_displayed.innerHTML = seconds;
+	
+	
+	
+	
+	if(seconds != '' && minutes == '' && hours == '')
+	{
+		minutes_displayed.innerHTML = 0;
+		hours_displayed.innerHTML = 0;
+	}
+	
+	if(seconds == '' && minutes != '' && hours == '')
+	{
+		seconds_displayed.innerHTML = 0;
+		hours_displayed.innerHTML = 0;
+	}
+	
+	if(seconds == '' && minutes == '' && hours != '')
+	{
+		minutes_displayed.innerHTML = 0;
+		seconds_displayed.innerHTML = 0;
+	}
+	
+	
+	
 
 	function showing_seconds_minutes_hours_function() 
 	{
