@@ -1,0 +1,25 @@
+.heading_for_the_app
+{
+	text-align:center;
+}
+
+.AddNoteContainer
+{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.DisplayNoteContainer
+{
+	display: inline-block;
+	align-items: center;
+	justify-content: center;
+	width:250px;
+}
+
+.DisplayNote
+{
+	align-items: center;
+	justify-content: space-between;
+}
