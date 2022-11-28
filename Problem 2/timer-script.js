@@ -1,8 +1,15 @@
+const start_timer_button = document.getElementById("timer_btn");
+
+rxjs.fromEvent(start_timer_button, 'click')
+  .subscribe(() => start_timer()
+);
+
 function start_timer()
 {
 	let hours = document.getElementById("hours").value;
 	let minutes = document.getElementById("minutes").value;
 	let seconds = document.getElementById("seconds").value;
+	let timer_button = document.getElementById("timer_btn");
 	
 	let current_seconds = seconds;
 	
@@ -44,7 +51,6 @@ function start_timer()
 	
 	
 	
-	
 	if(seconds != '' && minutes == '' && hours == '')
 	{
 		minutes_displayed.innerHTML = 0;
@@ -62,9 +68,6 @@ function start_timer()
 		minutes_displayed.innerHTML = 0;
 		seconds_displayed.innerHTML = 0;
 	}
-	
-	
-	
 
 	function showing_seconds_minutes_hours_function() 
 	{
