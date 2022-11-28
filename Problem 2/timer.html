@@ -10,19 +10,18 @@
 		{
 			float:left;
 		}
+		
 	</style>
 </head>
 
 <body>
 
-<form id="timer_form" onsubmit="start_timer();return false">
 
 	<input type="number" id="hours" min="0" size="1" placeholder="h" value="">
 	<input type="number" id="minutes" min="0" size="1" placeholder="m" value="">
 	<input type="number" id="seconds" min="0" size="1" placeholder="s" class="s" value="">
-	<button type="submit" form="timer_form" id="timer_btn">Start</button>
-
-</form>
+	<button type="submit" form="timer_form" name="timer_btn" id="timer_btn">Start</button>
+	<br><br>
 
 <div><p id="hours_shown"></p></div>
 <div><p id="colon_to_separate_time"></p></div>
