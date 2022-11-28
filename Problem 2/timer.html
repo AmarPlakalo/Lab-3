@@ -11,6 +11,29 @@
 			float:left;
 		}
 		
+		#hours_shown,#colon_to_separate_time,#minutes_shown,#colon_to_separate_time_2,#seconds_shown
+		{
+			font-size:30px;
+		}
+		
+		.button_timer
+		{
+			border-radius:6px;
+			background:#4CAF50;
+			border: none;
+			padding: 15px 32px;
+			text-align: center;
+			font-size: 16px;
+			color: white;
+		}
+		
+		#hours,#minutes,#seconds
+		{
+			border-radius:6px;
+			text-align: center;
+			font-size:16px;
+			padding: 15px 32px;
+		}
 	</style>
 </head>
 
@@ -19,17 +42,17 @@
 
 	<input type="number" id="hours" min="0" size="1" placeholder="h" value="">
 	<input type="number" id="minutes" min="0" size="1" placeholder="m" value="">
-	<input type="number" id="seconds" min="0" size="1" placeholder="s" class="s" value="">
-	<button type="submit" form="timer_form" name="timer_btn" id="timer_btn">Start</button>
+	<input type="number" id="seconds" min="0" size="1" placeholder="s" value="">
+	<button class="button_timer" type="submit" form="timer_form" name="timer_btn" id="timer_btn">Start</button>
 	<br><br>
 
-<div><p id="hours_shown"></p></div>
-<div><p id="colon_to_separate_time"></p></div>
-<div><p id="minutes_shown"></p></div>
-<div><p id="colon_to_separate_time_2"></p></div>
-<div><p id="seconds_shown"></p></div>
+	<div><p id="hours_shown"></p></div>
+	<div><p id="colon_to_separate_time"></p></div>
+	<div><p id="minutes_shown"></p></div>
+	<div><p id="colon_to_separate_time_2"></p></div>
+	<div><p id="seconds_shown"></p></div>
 
 
-<script src="timer-script.js"></script>
+	<script src="timer-script.js"></script>
 </body>
 </html>
